@@ -1,0 +1,39 @@
+# R output files (exclude most but keep some key visualizations)
+*_summary.txt
+mediation_*.csv
+
+# Keep example visualizations from Python
+!correlation_heatmap.png
+!time_series_plots.png
+!childhood_trauma_dimensions.png
+!scatter_matrix.png
+!mediation_conceptual_model.png
+
+# Keep only the core analysis files and documentation
+!README.md
+!correlation_matrix_python.csv
+!descriptive_statistics_python.csv
+!merged_data_python.csv
+
+# R history
+.Rhistory
+.RData
+.Rproj.user
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
