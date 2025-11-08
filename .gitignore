@@ -1,0 +1,34 @@
+# R output files
+*.png
+*.txt
+*_summary.csv
+mediation_*.csv
+
+# Keep only the core analysis files and documentation
+!README.md
+!correlation_matrix_python.csv
+!descriptive_statistics_python.csv
+!merged_data_python.csv
+
+# R history
+.Rhistory
+.RData
+.Rproj.user
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
