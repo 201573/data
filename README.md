@@ -39,6 +39,22 @@ This project implements cross-lagged panel analysis and mediation analysis for C
 ## 运行分析 / Running the Analysis
 
 ### 前提条件 / Prerequisites
+
+#### Python (推荐使用 / Recommended)
+- Python 3.7 or higher
+- 所需Python包 / Required Python packages:
+  - pandas
+  - numpy
+  - openpyxl
+  - matplotlib
+  - seaborn
+
+安装方法 / Installation:
+```bash
+pip install pandas numpy openpyxl matplotlib seaborn
+```
+
+#### R (可选，用于完整的SEM分析 / Optional, for full SEM analysis)
 - R (version 4.0 or higher)
 - 所需R包 / Required R packages:
   - readxl
@@ -52,12 +68,31 @@ This project implements cross-lagged panel analysis and mediation analysis for C
 
 ### 运行方法 / How to Run
 
-#### 方法1: 使用RStudio
+#### 方法1: Python数据准备和可视化 (推荐/Recommended)
+```bash
+# Step 1: 准备数据 / Prepare data
+python3 prepare_data.py
+
+# Step 2: 创建可视化 / Create visualizations
+python3 create_visualizations.py
+```
+
+这将生成以下文件 / This will generate:
+- `merged_data_python.csv` - 合并后的数据 / Merged dataset
+- `descriptive_statistics_python.csv` - 描述性统计 / Descriptive statistics
+- `correlation_matrix_python.csv` - 相关矩阵 / Correlation matrix
+- 多个PNG可视化图表 / Multiple PNG visualization files
+
+#### 方法2: 使用RStudio进行完整分析
 1. 打开 `cross_lagged_analysis.R` 文件
 2. 选择全部代码并运行
 
-#### 方法2: 命令行运行
+#### 方法3: 命令行运行R分析
 ```bash
+# 首先安装R包 / First install R packages
+Rscript install_r_packages.R
+
+# 然后运行分析 / Then run the analysis
 Rscript run_analysis.R
 ```
 
@@ -65,6 +100,21 @@ Rscript run_analysis.R
 ```bash
 Rscript cross_lagged_analysis.R
 ```
+
+## 项目文件 / Project Files
+
+### 核心脚本 / Core Scripts
+- `prepare_data.py` - Python数据准备脚本 (推荐先运行)
+- `create_visualizations.py` - Python可视化脚本
+- `cross_lagged_analysis.R` - R完整分析脚本 (包含交叉滞后和中介分析)
+- `run_analysis.R` - R分析启动脚本
+- `install_r_packages.R` - R包安装脚本
+
+### 数据和结果 / Data and Results
+- `merged_data_python.csv` - 处理后的合并数据
+- `descriptive_statistics_python.csv` - 描述性统计结果
+- `correlation_matrix_python.csv` - 相关矩阵
+- 各类PNG图表文件 - 可视化结果
 
 ## 分析方法 / Analysis Methods
 

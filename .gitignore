@@ -1,8 +1,13 @@
-# R output files
-*.png
-*.txt
-*_summary.csv
+# R output files (exclude most but keep some key visualizations)
+*_summary.txt
 mediation_*.csv
+
+# Keep example visualizations from Python
+!correlation_heatmap.png
+!time_series_plots.png
+!childhood_trauma_dimensions.png
+!scatter_matrix.png
+!mediation_conceptual_model.png
 
 # Keep only the core analysis files and documentation
 !README.md
